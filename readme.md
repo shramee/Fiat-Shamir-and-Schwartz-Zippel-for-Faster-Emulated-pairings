@@ -1,14 +1,12 @@
 # Fiat-Shamir and Schwartz-Zippel for Faster Emulated Pairings
 
-Please see the file [Fiat_Shamir_and_Schwartz_Zippel_for_Faster_Emulated_pairings.ipynb](Fiat_Shamir_and_Schwartz_Zippel_for_Faster_Emulated_pairings.ipynb) for equations, code and up to date notes.
+:warning: Please see the file [Fiat_Shamir_and_Schwartz_Zippel_for_Faster_Emulated_pairings.ipynb](Fiat_Shamir_and_Schwartz_Zippel_for_Faster_Emulated_pairings.ipynb) for well formatted equations and code.
 
 ## 1. Introduction
 
 In the write-up [Faster Extension Field multiplications for Emulated Pairing Circuits](https://hackmd.io/@feltroidprime/B1eyHHXNT#fn3), Feltroid Prime discusses using Schwartz Zippel lemma and Fiat Shamir heuristics to optimize Field multiplications (Sections 1, 2 and 3).
 
 Starting with representing $𝔽_{p12}$ (and equivalently $𝔽_{p6}$) as direct extensions in section 1. Then representing multiplication operation as a polynomial in section 2 (equation 1). Finally using Fiat-Shamir and the Schwartz-Zippel lemma in the circuit to verify the computation.
-
-> ${A(x)*B(x) = Q(x)*P(x) + R(x)}$ &emsp; &emsp; &emsp;${(1)}$
 
 We will expand on this to apply it to larger computations. To start with we will try to adapt this for exponentiation (equation 2), with a goal of replacing entire final exponentiation.
 
@@ -44,8 +42,6 @@ This section expands upon the process described in [Section 3 of FEFMEPC](https:
 ### 3.1 Computing Fiat Shamir heuristic
 
 Prover and verifier both need to compute this, here's an outline of the process.
-
-> $z = Hash(A_0, R_0, A_1, R_1, \cdots, A_{n-1}, R_{n-1})$
 
 1. Hash all coefficients of $A$ and $R$ mod $p$.
 2. Reduce the $z$ to make sure $z_{P} = P(z)$ doesn't require reduction. For example for BLS12-381, bit size of $z$ should be under $384 / 12 = 32$ bits. Or when using a $F_{P6}$ Torus $384 / 6 = 64$ bits. Assuming support for 384 bit integers.
