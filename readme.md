@@ -2,6 +2,10 @@
 
 :warning: Please see the file [Fiat_Shamir_and_Schwartz_Zippel_for_Faster_Emulated_pairings.ipynb](Fiat_Shamir_and_Schwartz_Zippel_for_Faster_Emulated_pairings.ipynb) for well formatted equations and code.
 
+:warning: Find working Python example in [the Google colab](https://colab.research.google.com/github/shramee/Fiat-Shamir-and-Schwartz-Zippel-for-Faster-Emulated-pairings/blob/main/Fiat_Shamir_and_Schwartz_Zippel_for_Faster_Emulated_pairings.ipynb) at https://colab.research.google.com/github/shramee/Fiat-Shamir-and-Schwartz-Zippel-for-Faster-Emulated-pairings/blob/main/Fiat_Shamir_and_Schwartz_Zippel_for_Faster_Emulated_pairings.ipynb.
+
+:warning: Find working verifier in Cairo [shramee/cairo_bn](https://github.com/shramee/cairo_bn/blob/main/src/schwartz_zippel.cairo).
+
 ## 1. Introduction
 
 In the write-up [Faster Extension Field multiplications for Emulated Pairing Circuits](https://hackmd.io/@feltroidprime/B1eyHHXNT#fn3), Feltroid Prime discusses using Schwartz Zippel lemma and Fiat Shamir heuristics to optimize Field multiplications (Sections 1, 2 and 3).
